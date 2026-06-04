@@ -1,0 +1,844 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Recursos Gratuitos para Emprendedores - RestoFinance"
+  description="Potencia la rentabilidad y gestión de tu negocio gastronómico con nuestras herramientas interactivas, plantillas y guías descargables."
+>
+  <Header />
+
+  <main class="flex-grow bg-brand-cream-light">
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PORTAL HERO HEADER                     -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-teal bg-brand-teal-light px-4 py-1.5 rounded-full uppercase tracking-wider border border-brand-teal/20 mb-5 select-none font-display">
+          🛠️ Centro de Recursos Gratuitos
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-brand-navy tracking-tight mb-4 leading-[1.12]">
+          Herramientas y Recursos para <span class="text-brand-orange">Emprendedores</span>
+        </h1>
+        <p class="text-sm sm:text-base md:text-lg text-brand-navy/70 leading-relaxed max-w-2xl mx-auto">
+          Potencia la rentabilidad y gestión de tu negocio gastronómico con nuestras herramientas interactivas, plantillas y guías descargables.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- TABS CONTROLLER (HORIZONTAL)           -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="pb-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-row justify-center gap-2 bg-white/80 backdrop-blur-md p-1.5 rounded-2xl border border-brand-teal/10 shadow-sm max-w-md mx-auto">
+          <button id="tab-inicio-btn" class="flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer bg-brand-orange text-white shadow-md shadow-brand-orange/20">
+            Inicio
+          </button>
+          <button id="tab-diagnostico-btn" class="flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer text-brand-navy/60 hover:text-brand-orange hover:bg-brand-orange-light/40">
+            Diagnóstico Financiero
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- INICIO (TODOS LOS RECURSOS) VIEW      -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="view-inicio" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 space-y-16 animate-fade-in">
+      
+      <!-- Resources Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Diagnóstico de Rentabilidad -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-teal/10 shadow-sm hover:shadow-md hover:border-brand-teal/20 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-[10px] font-bold text-brand-teal bg-brand-teal-light px-2.5 py-1 rounded-lg uppercase tracking-wider">Interactivo / Gratis</span>
+            </div>
+            <h3 class="text-lg font-display font-extrabold text-brand-navy mb-2 group-hover:text-brand-orange transition-colors">Evaluación de Salud Financiera</h3>
+            <p class="text-xs sm:text-sm text-brand-navy/60 leading-relaxed mb-6">Analiza tu margen neto, food cost y punto de equilibrio diario en segundos. Recibe sugerencias dinámicas basadas en tus datos.</p>
+          </div>
+          <button id="card-diagnostico-btn" class="w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-navy hover:bg-brand-orange hover:scale-[1.02] transition-all duration-200 cursor-pointer">
+            Iniciar Herramienta →
+          </button>
+        </div>
+
+        <!-- Card 2: Plantilla de Costeo de Platos -->
+        <div class="bg-white/60 rounded-3xl p-6 sm:p-8 border border-brand-navy/5 shadow-sm opacity-80 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-[10px] font-bold text-brand-navy/40 bg-brand-navy/5 px-2.5 py-1 rounded-lg uppercase tracking-wider">Excel / Próximamente</span>
+            </div>
+            <h3 class="text-lg font-display font-extrabold text-brand-navy/70 mb-2">Recetas y Costeo de Platos</h3>
+            <p class="text-xs sm:text-sm text-brand-navy/55 leading-relaxed mb-6">Lleva el cálculo exacto del costo por porción de tus recetas, calcula mermas y determina precios sugeridos de venta.</p>
+          </div>
+          <button disabled class="w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold text-brand-navy/40 bg-brand-navy/5 cursor-not-allowed">
+            Próximamente
+          </button>
+        </div>
+
+        <!-- Card 3: Control de Caja Diaria -->
+        <div class="bg-white/60 rounded-3xl p-6 sm:p-8 border border-brand-navy/5 shadow-sm opacity-80 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-[10px] font-bold text-brand-navy/40 bg-brand-navy/5 px-2.5 py-1 rounded-lg uppercase tracking-wider">Excel / Próximamente</span>
+            </div>
+            <h3 class="text-lg font-display font-extrabold text-brand-navy/70 mb-2">Flujo de Caja y Ventas Diarias</h3>
+            <p class="text-xs sm:text-sm text-brand-navy/55 leading-relaxed mb-6">Evita descuadres al cerrar tu caja diaria. Registra efectivo, transferencias digitales y salidas rápidas de caja.</p>
+          </div>
+          <button disabled class="w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold text-brand-navy/40 bg-brand-navy/5 cursor-not-allowed">
+            Próximamente
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ══ RESTOFINANCE ULTRA-PREMIUM SHOWCASE (DEFAULT HOME PRESENTATION) ══ -->
+      <div class="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-navy-light rounded-3xl p-8 sm:p-12 md:p-16 text-left relative overflow-hidden shadow-2xl border border-white/10 group">
+        
+        <!-- Background Tech Grid Overlay -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+        
+        <!-- Glowing Ambient Lighting -->
+        <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-orange/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-brand-orange/25 transition-all duration-500"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-teal/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-brand-teal/25 transition-all duration-500"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange bg-brand-orange/15 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+              Lleva tu restaurante al siguiente nivel
+            </span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white leading-[1.12] tracking-tight">
+              ¿Por qué seguir controlando tu negocio a ciegas?
+            </h2>
+            <p class="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed font-normal">
+              Las hojas de cálculo y las calculadoras manuales son lentas y propensas a errores. <strong class="text-white">RestoFinance</strong> es el sistema de punto de venta y finanzas definitivo que funciona localmente, sin depender de internet.
+            </p>
+            
+            <!-- Features List -->
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white/90 text-sm md:text-base">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 text-brand-orange shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Ventas y caja en tiempo real</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Costo de recetas e insumos</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 text-brand-orange shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Utilidad neta mensual automática</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Funciona sin internet al 100%</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+              <a 
+                href="https://github.com/Francisco-jvcmd/RestoFinance-Instalador/releases/download/v1.0.0/RestoFinance_1.0.0_x64-setup.exe"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4.5 rounded-2xl text-sm sm:text-base font-extrabold text-white bg-brand-orange hover:bg-brand-orange-hover hover:scale-[1.03] active:scale-[0.97] shadow-xl shadow-brand-orange/30 hover:shadow-brand-orange/45 transition-all duration-200"
+              >
+                <svg class="w-5.5 h-5.5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.102zM10.95 1.95L24 0v11.55H10.95V1.95zM10.95 12.45H24v9.6L10.95 22.05v-9.6z"/></svg>
+                Descargar Gratis
+              </a>
+              <a 
+                href="/#precios"
+                class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4.5 rounded-2xl text-sm sm:text-base font-bold text-white/90 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 hover:border-white/25 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200"
+              >
+                Ver Planes de Licencia
+              </a>
+            </div>
+          </div>
+          
+          <!-- Premium Graphical Mockup Showcase -->
+          <div class="hidden lg:flex lg:col-span-5 relative mt-8 lg:mt-0 justify-center">
+            <div class="relative bg-white/5 border border-white/10 rounded-2xl p-5 w-full max-w-[320px] shadow-2xl backdrop-blur-md transition-transform duration-300 hover:scale-[1.02]">
+              <!-- Mock Window Titlebar -->
+              <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4 text-xs font-semibold text-white/60">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-red-500/80"></span>
+                  <span class="w-2 h-2 rounded-full bg-yellow-500/80"></span>
+                  <span class="w-2 h-2 rounded-full bg-green-500/80"></span>
+                </div>
+                <span>RestoFinance Desktop v1.0.0</span>
+              </div>
+              
+              <!-- Content Stats Mockup -->
+              <div class="space-y-3">
+                <div class="bg-white/[0.04] rounded-xl p-3 border border-white/5">
+                  <span class="text-[9px] text-white/50 block uppercase font-bold tracking-wider mb-1">Margen Neto Mensual</span>
+                  <div class="flex justify-between items-baseline">
+                    <span class="text-xl font-display font-black text-brand-orange">32.4%</span>
+                    <span class="text-[9px] text-emerald-400 font-bold bg-emerald-400/10 px-1.5 py-0.5 rounded">Saludable</span>
+                  </div>
+                </div>
+                <div class="bg-white/[0.04] rounded-xl p-3 border border-white/5">
+                  <span class="text-[9px] text-white/50 block uppercase font-bold tracking-wider mb-1">Ventas Totales</span>
+                  <span class="text-lg font-display font-bold text-white">$ 4,850.00</span>
+                </div>
+                <div class="bg-white/[0.04] rounded-xl p-3 border border-white/5">
+                  <span class="text-[9px] text-white/50 block uppercase font-bold tracking-wider mb-1">Punto de Equilibrio</span>
+                  <div class="flex items-center gap-2 mt-1">
+                    <div class="w-full bg-white/10 rounded-full h-1.5">
+                      <div class="bg-brand-teal h-1.5 rounded-full" style="width: 100%;"></div>
+                    </div>
+                    <span class="text-[10px] text-brand-teal font-extrabold shrink-0">100%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- VIEW: DIAGNOSTICO TOOL                 -->
+    <!-- ═══════════════════════════════════════ -->
+    <div id="view-diagnostico" class="hidden">
+      
+      <!-- HOW IT WORKS (3 Steps)                 -->
+      <section class="pb-10 sm:pb-14">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5">
+
+            <div class="flex sm:flex-col items-center sm:items-center gap-3 sm:gap-2.5 bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-brand-orange/8 shadow-sm sm:text-center">
+              <span class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange-light text-brand-orange flex items-center justify-center font-display font-extrabold text-base sm:text-lg">1</span>
+              <div>
+                <h3 class="text-sm font-bold text-brand-navy">Ingresa tus datos</h3>
+                <p class="text-[11px] sm:text-xs text-brand-navy/50 mt-0.5">5 datos básicos de tu restaurante</p>
+              </div>
+            </div>
+
+            <div class="flex sm:flex-col items-center sm:items-center gap-3 sm:gap-2.5 bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-brand-teal/8 shadow-sm sm:text-center">
+              <span class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-teal-light text-brand-teal flex items-center justify-center font-display font-extrabold text-base sm:text-lg">2</span>
+              <div>
+                <h3 class="text-sm font-bold text-brand-navy">Recibe tu diagnóstico</h3>
+                <p class="text-[11px] sm:text-xs text-brand-navy/50 mt-0.5">Análisis instantáneo de rentabilidad</p>
+              </div>
+            </div>
+
+            <div class="flex sm:flex-col items-center sm:items-center gap-3 sm:gap-2.5 bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-brand-orange/8 shadow-sm sm:text-center">
+              <span class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange-light text-brand-orange flex items-center justify-center font-display font-extrabold text-base sm:text-lg">3</span>
+              <div>
+                <h3 class="text-sm font-bold text-brand-navy">Toma acción</h3>
+                <p class="text-[11px] sm:text-xs text-brand-navy/50 mt-0.5">Recomendaciones personalizadas</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DIAGNOSTIC FORM                        -->
+      <section class="pb-16" id="formulario">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-brand-orange/10 shadow-lg relative overflow-hidden">
+
+            <!-- Decorative corner -->
+            <div class="absolute top-0 right-0 w-36 h-36 bg-brand-orange/[0.03] rounded-bl-full pointer-events-none"></div>
+
+            <h2 class="text-lg sm:text-xl font-display font-extrabold text-brand-navy mb-1 relative z-10">
+              Datos de tu Restaurante
+            </h2>
+            <p class="text-xs sm:text-sm text-brand-navy/50 mb-8 relative z-10">
+              Completa los 5 campos con información aproximada. No necesita ser exacta.
+            </p>
+
+            <form id="diagnostic-form" class="space-y-6 relative z-10" novalidate>
+
+              <!-- Field 1: Ventas mensuales -->
+              <div class="space-y-1.5">
+                <label for="input-ventas" class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                  <span class="text-base leading-none">💰</span> Ventas mensuales aproximadas
+                </label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brand-navy/35 font-bold text-sm select-none pointer-events-none">$</span>
+                  <input 
+                    type="number" 
+                    id="input-ventas" 
+                    min="0" max="500000" step="50" 
+                    placeholder="3000"
+                    required
+                    class="w-full pl-9 pr-4 py-3.5 sm:py-4 rounded-2xl border-2 border-brand-navy/10 bg-brand-cream-light/30 text-brand-navy font-bold text-base sm:text-lg focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all duration-200 outline-none placeholder:text-brand-navy/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                </div>
+                <p class="text-[11px] text-brand-navy/40 pl-1">Todo el dinero que entra a tu negocio en un mes (efectivo + transferencias)</p>
+              </div>
+
+              <!-- Field 2: Costo de insumos -->
+              <div class="space-y-1.5">
+                <label for="input-insumos" class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                  <span class="text-base leading-none">🛒</span> Compras del mercado / insumos al mes
+                </label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brand-navy/35 font-bold text-sm select-none pointer-events-none">$</span>
+                  <input 
+                    type="number" 
+                    id="input-insumos" 
+                    min="0" max="500000" step="50" 
+                    placeholder="1200"
+                    required
+                    class="w-full pl-9 pr-4 py-3.5 sm:py-4 rounded-2xl border-2 border-brand-navy/10 bg-brand-cream-light/30 text-brand-navy font-bold text-base sm:text-lg focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all duration-200 outline-none placeholder:text-brand-navy/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                </div>
+                <p class="text-[11px] text-brand-navy/40 pl-1">Lo que gastas en carne, verduras, arroz, aceite y todos los ingredientes</p>
+              </div>
+
+              <!-- Field 3: Gastos fijos -->
+              <div class="space-y-1.5">
+                <label for="input-fijos" class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                  <span class="text-base leading-none">🏠</span> Gastos fijos mensuales
+                </label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brand-navy/35 font-bold text-sm select-none pointer-events-none">$</span>
+                  <input 
+                    type="number" 
+                    id="input-fijos" 
+                    min="0" max="500000" step="50" 
+                    placeholder="800"
+                    required
+                    class="w-full pl-9 pr-4 py-3.5 sm:py-4 rounded-2xl border-2 border-brand-navy/10 bg-brand-cream-light/30 text-brand-navy font-bold text-base sm:text-lg focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all duration-200 outline-none placeholder:text-brand-navy/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                </div>
+                <p class="text-[11px] text-brand-navy/40 pl-1">Alquiler + luz + agua + sueldos + gas + otros gastos fijos cada mes</p>
+              </div>
+
+              <!-- Field 4: Días por semana -->
+              <div class="space-y-2">
+                <label class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                  <span class="text-base leading-none">📅</span> ¿Cuántos días abres a la semana?
+                </label>
+                <div class="flex gap-3" id="dias-group">
+                  <button type="button" data-dias="5" class="dia-btn flex-1 py-3 sm:py-3.5 rounded-2xl border-2 border-brand-navy/10 text-sm font-bold text-brand-navy/60 hover:border-brand-orange/40 hover:text-brand-orange transition-all duration-200 bg-brand-cream-light/30 cursor-pointer">
+                    5 días
+                  </button>
+                  <button type="button" data-dias="6" class="dia-btn dia-btn--active flex-1 py-3 sm:py-3.5 rounded-2xl border-2 border-brand-orange text-sm font-bold text-white bg-brand-orange shadow-md shadow-brand-orange/20 transition-all duration-200 cursor-pointer">
+                    6 días
+                  </button>
+                  <button type="button" data-dias="7" class="dia-btn flex-1 py-3 sm:py-3.5 rounded-2xl border-2 border-brand-navy/10 text-sm font-bold text-brand-navy/60 hover:border-brand-orange/40 hover:text-brand-orange transition-all duration-200 bg-brand-cream-light/30 cursor-pointer">
+                    7 días
+                  </button>
+                </div>
+              </div>
+
+              <!-- Field 5: Precio plato estrella -->
+              <div class="space-y-1.5">
+                <label for="input-plato" class="flex items-center gap-2 text-sm font-bold text-brand-navy">
+                  <span class="text-base leading-none">⭐</span> Precio de tu plato más vendido
+                </label>
+                <div class="relative">
+                  <span class="absolute left-4 top-1/2 -translate-y-1/2 text-brand-navy/35 font-bold text-sm select-none pointer-events-none">$</span>
+                  <input 
+                    type="number" 
+                    id="input-plato" 
+                    min="0" max="1000" step="0.25" 
+                    placeholder="3.50"
+                    required
+                    class="w-full pl-9 pr-4 py-3.5 sm:py-4 rounded-2xl border-2 border-brand-navy/10 bg-brand-cream-light/30 text-brand-navy font-bold text-base sm:text-lg focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 transition-all duration-200 outline-none placeholder:text-brand-navy/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                </div>
+                <p class="text-[11px] text-brand-navy/40 pl-1">El precio de venta al público del platillo que más vendes</p>
+              </div>
+
+              <!-- Validation Error -->
+              <div id="form-error" class="p-4 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-700 font-medium flex items-center gap-2" style="display:none;">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+                <span>Por favor completa todos los campos con valores válidos mayores a cero.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button 
+                type="submit" 
+                id="btn-diagnosticar"
+                class="w-full mt-2 inline-flex items-center justify-center gap-2.5 px-6 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-extrabold text-white bg-brand-orange hover:bg-brand-orange-hover hover:scale-[1.01] hover:shadow-xl hover:shadow-brand-orange/20 active:scale-[0.99] shadow-lg shadow-brand-orange/15 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-brand-orange/30 cursor-pointer"
+              >
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                Diagnosticar mi Negocio
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS SECTION (hidden initially)     -->
+      <section id="results-section" class="pb-20 sm:pb-24 scroll-mt-24" style="display:none;">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+
+          <!-- Results Header -->
+          <div class="text-center">
+            <span class="text-xs font-bold text-brand-teal bg-brand-teal-light px-3 py-1 rounded-full uppercase tracking-wider border border-brand-teal/15">
+              Tu Diagnóstico Financiero
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-brand-navy tracking-tight mt-3">
+              Resultados de tu Restaurante
+            </h2>
+          </div>
+
+          <!-- ══ SEMÁFORO CARD ══ -->
+          <div id="semaforo-card" class="rounded-3xl p-6 sm:p-8 md:p-10 border shadow-lg text-center transition-all duration-500">
+            <!-- Status Icon -->
+            <div id="semaforo-icon" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto flex items-center justify-center mb-4 shadow-lg">
+              <!-- Filled by JS -->
+            </div>
+            <!-- Status Text -->
+            <h3 id="semaforo-text" class="text-2xl sm:text-3xl font-display font-extrabold mb-2">—</h3>
+            <!-- Status Description -->
+            <p id="semaforo-desc" class="text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-6">—</p>
+            <!-- Net Profit Highlight -->
+            <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-2xl border border-white/30 shadow-sm">
+              <span class="text-xs sm:text-sm font-bold text-brand-navy/60 uppercase tracking-wider">Ganancia Neta Mensual:</span>
+              <span id="semaforo-ganancia" class="text-xl sm:text-2xl font-display font-black">—</span>
+            </div>
+          </div>
+
+          <!-- ══ METRICS GRID (4 Cards) ══ -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+
+            <!-- Metric 1: Margen Neto -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-orange/8 shadow-sm text-center">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-orange-light text-brand-orange flex items-center justify-center mx-auto mb-2.5">
+                <svg class="w-4.5 h-4.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+              </div>
+              <p class="text-[10px] sm:text-xs font-bold text-brand-navy/50 uppercase tracking-wider mb-1">Margen Neto</p>
+              <p id="metric-margen" class="text-xl sm:text-2xl font-display font-black text-brand-navy">—</p>
+            </div>
+
+            <!-- Metric 2: Food Cost -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-teal/8 shadow-sm text-center">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-teal-light text-brand-teal flex items-center justify-center mx-auto mb-2.5">
+                <svg class="w-4.5 h-4.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              </div>
+              <p class="text-[10px] sm:text-xs font-bold text-brand-navy/50 uppercase tracking-wider mb-1">Costo Insumos</p>
+              <p id="metric-foodcost" class="text-xl sm:text-2xl font-display font-black text-brand-navy">—</p>
+              <p class="text-[9px] sm:text-[10px] text-brand-navy/40 font-semibold mt-0.5">Ideal: 28% – 35%</p>
+            </div>
+
+            <!-- Metric 3: Gastos Fijos % -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-orange/8 shadow-sm text-center">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-orange-light text-brand-orange flex items-center justify-center mx-auto mb-2.5">
+                <svg class="w-4.5 h-4.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              </div>
+              <p class="text-[10px] sm:text-xs font-bold text-brand-navy/50 uppercase tracking-wider mb-1">Gastos Fijos</p>
+              <p id="metric-fijos" class="text-xl sm:text-2xl font-display font-black text-brand-navy">—</p>
+              <p class="text-[9px] sm:text-[10px] text-brand-navy/40 font-semibold mt-0.5">Ideal: &lt; 35%</p>
+            </div>
+
+            <!-- Metric 4: Break Even -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-teal/8 shadow-sm text-center">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-teal-light text-brand-teal flex items-center justify-center mx-auto mb-2.5">
+                <svg class="w-4.5 h-4.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+              </div>
+              <p class="text-[10px] sm:text-xs font-bold text-brand-navy/50 uppercase tracking-wider mb-1">Punto Equilibrio</p>
+              <p id="metric-equilibrio" class="text-xl sm:text-2xl font-display font-black text-brand-navy">—</p>
+              <p class="text-[9px] sm:text-[10px] text-brand-navy/40 font-semibold mt-0.5">platos / día mínimo</p>
+            </div>
+
+          </div>
+
+          <!-- ══ FOOD COST BAR VISUALIZATION ══ -->
+          <div class="bg-white rounded-3xl p-5 sm:p-7 border border-brand-orange/8 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-sm font-bold text-brand-navy flex items-center gap-2">
+                <span class="text-base leading-none">📊</span> Tu Costo de Insumos vs. Rango Ideal
+              </h4>
+              <span id="foodcost-badge" class="text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-lg">—</span>
+            </div>
+            <!-- Bar -->
+            <div class="relative h-5 sm:h-6 bg-brand-cream rounded-full overflow-hidden border border-brand-navy/5">
+              <!-- Ideal zone marker -->
+              <div class="absolute top-0 bottom-0 bg-emerald-100/70 border-x border-emerald-300/40" style="left:46.7%;width:11.7%;"></div>
+              <!-- Actual bar -->
+              <div id="foodcost-bar" class="absolute top-0 left-0 bottom-0 rounded-full transition-all duration-1000 ease-out" style="width:0%;"></div>
+            </div>
+            <!-- Legend -->
+            <div class="flex items-center justify-between mt-2 text-[9px] sm:text-[10px] text-brand-navy/40 font-semibold">
+              <span>0%</span>
+              <span class="text-emerald-600">← 28%-35% Ideal →</span>
+              <span>50%+</span>
+            </div>
+          </div>
+
+          <!-- ══ RECOMMENDATIONS ══ -->
+          <div class="bg-white rounded-3xl p-5 sm:p-7 border border-brand-teal/10 shadow-sm">
+            <h4 class="text-sm sm:text-base font-display font-bold text-brand-navy mb-4">
+              Recomendaciones para tu Negocio
+            </h4>
+            <div id="recommendations-list" class="space-y-3">
+              <!-- Filled dynamically by JS -->
+            </div>
+          </div>
+
+          <!-- ══ CTA: RESTOFINANCE ══ -->
+          <div class="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-navy-light rounded-3xl p-6 sm:p-10 md:p-14 lg:p-16 xl:p-20 text-center relative overflow-hidden shadow-2xl border border-white/10 hover:border-brand-orange/20 transition-all duration-300 group">
+            
+            <!-- Background Grid Pattern -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+
+            <!-- Decorative glowing orbs with group hover animations -->
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-orange/20 rounded-full blur-[80px] pointer-events-none group-hover:bg-brand-orange/30 transition-all duration-500"></div>
+            <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-brand-teal/20 rounded-full blur-[80px] pointer-events-none group-hover:bg-brand-teal/30 transition-all duration-500"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-3xl mx-auto">
+              <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-black text-white mb-4 sm:mb-6 leading-tight tracking-tight">
+                ¿Quieres ver estos números actualizados<br class="hidden sm:block" /> <span class="bg-gradient-to-r from-brand-orange via-amber-400 to-brand-orange bg-clip-text text-transparent">en tiempo real, cada día?</span>
+              </h3>
+              <p class="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal">
+                RestoFinance calcula automáticamente tus ventas, gastos, insumos y ganancia neta. Todo desde tu computador, sin internet, sin calculadora. Empieza a tomar decisiones con datos reales.
+              </p>
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a 
+                  href="https://github.com/Francisco-jvcmd/RestoFinance-Instalador/releases/download/v1.0.0/RestoFinance_1.0.0_x64-setup.exe"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-5 rounded-2xl text-sm sm:text-base font-extrabold text-white bg-brand-orange hover:bg-brand-orange-hover hover:scale-[1.03] active:scale-[0.97] shadow-xl shadow-brand-orange/30 hover:shadow-brand-orange/45 transition-all duration-200"
+                >
+                  <svg class="w-5.5 h-5.5" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.102zM10.95 1.95L24 0v11.55H10.95V1.95zM10.95 12.45H24v9.6L10.95 22.05v-9.6z"/></svg>
+                  Descargar RestoFinance Gratis
+                </a>
+                <a 
+                  href="/#precios"
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:py-5 rounded-2xl text-sm sm:text-base font-bold text-white/90 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 hover:border-white/25 hover:scale-[1.03] active:scale-[0.97] transition-all duration-200"
+                >
+                  Ver Planes de Licencia
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recalculate Button -->
+          <div class="text-center pt-2">
+            <button 
+              id="btn-recalcular" 
+              type="button"
+              class="inline-flex items-center gap-2 text-sm font-bold text-brand-teal hover:text-brand-orange transition-colors duration-200 cursor-pointer"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              Cambiar mis datos y recalcular
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- DIAGNOSTIC ENGINE (JavaScript)                 -->
+<!-- ═══════════════════════════════════════════════ -->
+<script is:inline>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // ── TAB TOGGLE LOGIC ──
+    var tabInicioBtn = document.getElementById('tab-inicio-btn');
+    var tabDiagnosticoBtn = document.getElementById('tab-diagnostico-btn');
+    var viewInicio = document.getElementById('view-inicio');
+    var viewDiagnostico = document.getElementById('view-diagnostico');
+    var cardDiagnosticoBtn = document.getElementById('card-diagnostico-btn');
+
+    function setActiveTab(tab) {
+      if (tab === 'inicio') {
+        viewInicio.classList.remove('hidden');
+        viewDiagnostico.classList.add('hidden');
+        tabInicioBtn.className = "flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer bg-brand-orange text-white shadow-md shadow-brand-orange/20";
+        tabDiagnosticoBtn.className = "flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer text-brand-navy/60 hover:text-brand-orange hover:bg-brand-orange-light/40";
+      } else if (tab === 'diagnostico') {
+        viewInicio.classList.add('hidden');
+        viewDiagnostico.classList.remove('hidden');
+        tabDiagnosticoBtn.className = "flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer bg-brand-orange text-white shadow-md shadow-brand-orange/20";
+        tabInicioBtn.className = "flex-1 text-center px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer text-brand-navy/60 hover:text-brand-orange hover:bg-brand-orange-light/40";
+      }
+    }
+
+    if (tabInicioBtn) {
+      tabInicioBtn.addEventListener('click', function() { setActiveTab('inicio'); });
+    }
+    if (tabDiagnosticoBtn) {
+      tabDiagnosticoBtn.addEventListener('click', function() { setActiveTab('diagnostico'); });
+    }
+    if (cardDiagnosticoBtn) {
+      cardDiagnosticoBtn.addEventListener('click', function() {
+        setActiveTab('diagnostico');
+        setTimeout(function() {
+          var formElem = document.getElementById('formulario');
+          if (formElem) {
+            formElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      });
+    }
+
+    // ── DOM ELEMENTS ──
+    var form = document.getElementById('diagnostic-form');
+    var diasBtns = document.querySelectorAll('.dia-btn');
+    var formError = document.getElementById('form-error');
+    var resultsSection = document.getElementById('results-section');
+    var btnRecalcular = document.getElementById('btn-recalcular');
+
+    // Result elements
+    var semaforoCard = document.getElementById('semaforo-card');
+    var semaforoIcon = document.getElementById('semaforo-icon');
+    var semaforoText = document.getElementById('semaforo-text');
+    var semaforoDesc = document.getElementById('semaforo-desc');
+    var semaforoGanancia = document.getElementById('semaforo-ganancia');
+
+    var metricMargen = document.getElementById('metric-margen');
+    var metricFoodcost = document.getElementById('metric-foodcost');
+    var metricFijos = document.getElementById('metric-fijos');
+    var metricEquilibrio = document.getElementById('metric-equilibrio');
+
+    var foodcostBar = document.getElementById('foodcost-bar');
+    var foodcostBadge = document.getElementById('foodcost-badge');
+    var recommendationsList = document.getElementById('recommendations-list');
+
+    // ── STATE ──
+    var selectedDias = 6;
+
+    // ── DAYS SELECTION ──
+    diasBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        selectedDias = parseInt(btn.getAttribute('data-dias'));
+        diasBtns.forEach(function(b) {
+          b.classList.remove('dia-btn--active', 'border-brand-orange', 'text-white', 'bg-brand-orange', 'shadow-md', 'shadow-brand-orange/20');
+          b.classList.add('border-brand-navy/10', 'text-brand-navy/60', 'bg-brand-cream-light/30');
+        });
+        btn.classList.remove('border-brand-navy/10', 'text-brand-navy/60', 'bg-brand-cream-light/30');
+        btn.classList.add('dia-btn--active', 'border-brand-orange', 'text-white', 'bg-brand-orange', 'shadow-md', 'shadow-brand-orange/20');
+      });
+    });
+
+    // ── FORM SUBMISSION ──
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var ventas = parseFloat(document.getElementById('input-ventas').value);
+      var insumos = parseFloat(document.getElementById('input-insumos').value);
+      var fijos = parseFloat(document.getElementById('input-fijos').value);
+      var plato = parseFloat(document.getElementById('input-plato').value);
+
+      // Validation
+      if (!ventas || ventas <= 0 || isNaN(insumos) || insumos < 0 || isNaN(fijos) || fijos < 0 || !plato || plato <= 0) {
+        formError.style.display = 'flex';
+        formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      formError.style.display = 'none';
+
+      // ── CALCULATIONS ──
+      var foodCostPct = (insumos / ventas) * 100;
+      var gananciaNeta = ventas - insumos - fijos;
+      var margenNeto = (gananciaNeta / ventas) * 100;
+      var gastosFijosPct = (fijos / ventas) * 100;
+
+      // Break even (plates per day)
+      var costoInsumoPlato = plato * (foodCostPct / 100);
+      var contribucionPlato = plato - costoInsumoPlato;
+      var diasMes = selectedDias * 4.33;
+      var platosDia = 0;
+      if (contribucionPlato > 0 && diasMes > 0) {
+        platosDia = Math.ceil(fijos / contribucionPlato / diasMes);
+      }
+
+      // ── DETERMINE STATUS ──
+      var statusLevel, statusText, statusDesc;
+      var cardBg, cardBorder, iconBg, iconSvg, gananciaColor;
+
+      if (margenNeto >= 15) {
+        statusLevel = 'healthy';
+        statusText = '¡Tu negocio está saludable!';
+        statusDesc = 'Tu restaurante muestra márgenes positivos. Mantén esta tendencia automatizando tu control financiero diario para no perder el rumbo.';
+        cardBg = 'bg-gradient-to-br from-emerald-50 via-white to-emerald-50/50';
+        cardBorder = 'border-emerald-200/60';
+        iconBg = 'bg-emerald-500';
+        iconSvg = '<svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>';
+        gananciaColor = 'text-emerald-600';
+      } else if (margenNeto >= 5) {
+        statusLevel = 'warning';
+        statusText = 'Tu negocio está en riesgo';
+        statusDesc = 'Generas ganancia pero los márgenes son ajustados. Una subida en precios de insumos o una caída en ventas podría llevarte a pérdidas rápidamente.';
+        cardBg = 'bg-gradient-to-br from-amber-50 via-white to-amber-50/50';
+        cardBorder = 'border-amber-200/60';
+        iconBg = 'bg-amber-500';
+        iconSvg = '<svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3"></path></svg>';
+        gananciaColor = 'text-amber-600';
+      } else if (margenNeto >= 0) {
+        statusLevel = 'danger';
+        statusText = 'Zona crítica';
+        statusDesc = 'Tu restaurante apenas sobrevive. Estás al borde de generar pérdidas. Es urgente revisar tus costos y tu estrategia de precios.';
+        cardBg = 'bg-gradient-to-br from-red-50 via-white to-red-50/50';
+        cardBorder = 'border-red-200/60';
+        iconBg = 'bg-red-500';
+        iconSvg = '<svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3"></path></svg>';
+        gananciaColor = 'text-red-500';
+      } else {
+        statusLevel = 'loss';
+        statusText = 'Estás perdiendo dinero';
+        statusDesc = 'Tu restaurante opera con pérdidas cada mes. Necesitas tomar acción inmediata: reducir costos, renegociar con proveedores o ajustar tus precios de venta.';
+        cardBg = 'bg-gradient-to-br from-red-100 via-red-50 to-white';
+        cardBorder = 'border-red-300/60';
+        iconBg = 'bg-red-600';
+        iconSvg = '<svg class="w-10 h-10 sm:w-12 sm:h-12 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>';
+        gananciaColor = 'text-red-600';
+      }
+
+      // ── UPDATE SEMÁFORO CARD ──
+      semaforoCard.className = 'rounded-3xl p-6 sm:p-8 md:p-10 border shadow-lg text-center transition-all duration-500 ' + cardBg + ' ' + cardBorder;
+      semaforoIcon.className = 'w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto flex items-center justify-center mb-4 shadow-lg ' + iconBg;
+      semaforoIcon.innerHTML = iconSvg;
+      semaforoText.textContent = statusText;
+      semaforoText.className = 'text-2xl sm:text-3xl font-display font-extrabold mb-2 ' + gananciaColor;
+      semaforoDesc.textContent = statusDesc;
+      semaforoDesc.className = 'text-sm sm:text-base max-w-lg mx-auto leading-relaxed mb-6 text-brand-navy/70';
+
+      // Format currency
+      var fmtGanancia = (gananciaNeta < 0 ? '-$' : '$') + Math.abs(gananciaNeta).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      semaforoGanancia.textContent = fmtGanancia;
+      semaforoGanancia.className = 'text-xl sm:text-2xl font-display font-black ' + gananciaColor;
+
+      // ── UPDATE METRICS ──
+      metricMargen.textContent = margenNeto.toFixed(1) + '%';
+      metricFoodcost.textContent = foodCostPct.toFixed(1) + '%';
+      metricFijos.textContent = gastosFijosPct.toFixed(1) + '%';
+      metricEquilibrio.textContent = contribucionPlato > 0 ? platosDia : '—';
+
+      // Color code metrics
+      metricMargen.className = 'text-xl sm:text-2xl font-display font-black ' + (margenNeto >= 15 ? 'text-emerald-600' : margenNeto >= 5 ? 'text-amber-600' : 'text-red-600');
+      metricFoodcost.className = 'text-xl sm:text-2xl font-display font-black ' + (foodCostPct <= 35 ? 'text-emerald-600' : foodCostPct <= 45 ? 'text-amber-600' : 'text-red-600');
+      metricFijos.className = 'text-xl sm:text-2xl font-display font-black ' + (gastosFijosPct <= 35 ? 'text-emerald-600' : gastosFijosPct <= 50 ? 'text-amber-600' : 'text-red-600');
+      metricEquilibrio.className = 'text-xl sm:text-2xl font-display font-black text-brand-navy';
+
+      // ── UPDATE FOOD COST BAR ──
+      var barWidth = Math.min(foodCostPct, 60);
+      var barPct = (barWidth / 60) * 100;
+      var barColor = foodCostPct <= 35 ? 'bg-emerald-500' : foodCostPct <= 45 ? 'bg-amber-500' : 'bg-red-500';
+      foodcostBar.style.width = '0%';
+      foodcostBar.className = 'absolute top-0 left-0 bottom-0 rounded-full transition-all duration-1000 ease-out ' + barColor;
+      setTimeout(function() { foodcostBar.style.width = barPct + '%'; }, 200);
+
+      // Food cost badge
+      var badgeText, badgeClass;
+      if (foodCostPct <= 28) {
+        badgeText = 'Excelente'; badgeClass = 'text-emerald-700 bg-emerald-100 border border-emerald-200';
+      } else if (foodCostPct <= 35) {
+        badgeText = 'Ideal'; badgeClass = 'text-emerald-700 bg-emerald-100 border border-emerald-200';
+      } else if (foodCostPct <= 45) {
+        badgeText = 'Elevado'; badgeClass = 'text-amber-700 bg-amber-100 border border-amber-200';
+      } else {
+        badgeText = 'Crítico'; badgeClass = 'text-red-700 bg-red-100 border border-red-200';
+      }
+      foodcostBadge.textContent = badgeText;
+      foodcostBadge.className = 'text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-lg ' + badgeClass;
+
+      // ── BUILD RECOMMENDATIONS ──
+      var tips = [];
+
+      if (margenNeto < 0) {
+        tips.push({
+          icon: '🚨',
+          color: 'border-red-200 bg-red-50',
+          title: 'Acción urgente: Estás operando con pérdidas',
+          text: 'Cada mes que pasa sin cambios, pierdes $' + Math.abs(gananciaNeta).toFixed(0) + '. Revisa inmediatamente qué gastos puedes reducir o si necesitas ajustar tus precios de venta.'
+        });
+      }
+
+      if (foodCostPct > 35) {
+        tips.push({
+          icon: '🛒',
+          color: 'border-amber-200 bg-amber-50',
+          title: 'Tu costo de insumos está por encima del ideal',
+          text: 'Tu food cost es del ' + foodCostPct.toFixed(1) + '% (lo ideal es entre 28% y 35%). Considera renegociar con tu proveedor, ajustar las porciones o revisar recetas para reducir desperdicios.'
+        });
+      }
+
+      if (gastosFijosPct > 40) {
+        tips.push({
+          icon: '🏠',
+          color: 'border-amber-200 bg-amber-50',
+          title: 'Tus gastos fijos están consumiendo mucho',
+          text: 'Los gastos fijos representan el ' + gastosFijosPct.toFixed(1) + '% de tus ventas (lo ideal es menos del 35%). Evalúa renegociar tu arriendo, optimizar horarios de empleados o reducir servicios básicos innecesarios.'
+        });
+      }
+
+      if (margenNeto >= 0 && margenNeto < 10) {
+        tips.push({
+          icon: '📈',
+          color: 'border-brand-teal/20 bg-brand-teal-light',
+          title: 'Aumenta tus ventas para respirar mejor',
+          text: 'Con un margen del ' + margenNeto.toFixed(1) + '%, cualquier imprevisto puede ponerte en números rojos. Considera crear combos, promover tu plato estrella en redes sociales o ampliar tu horario en días de alta demanda.'
+        });
+      }
+
+      if (foodCostPct <= 35 && foodCostPct >= 28) {
+        tips.push({
+          icon: '✅',
+          color: 'border-emerald-200 bg-emerald-50',
+          title: 'Tu costo de insumos está en rango ideal',
+          text: '¡Buen trabajo! Mantienes un food cost del ' + foodCostPct.toFixed(1) + '%, dentro del rango óptimo para restaurantes. Sigue monitoreando mes a mes para que los proveedores no te suban precios sin notarlo.'
+        });
+      }
+
+      if (margenNeto >= 15) {
+        tips.push({
+          icon: '🏆',
+          color: 'border-emerald-200 bg-emerald-50',
+          title: '¡Felicidades! Márgenes saludables',
+          text: 'Tu restaurante genera un margen neto del ' + margenNeto.toFixed(1) + '%. El siguiente paso es automatizar este control para mantener la tendencia y detectar anomalías antes de que se conviertan en problemas.'
+        });
+      }
+
+      if (contribucionPlato > 0) {
+        tips.push({
+          icon: '🎯',
+          color: 'border-brand-orange/15 bg-brand-orange-light',
+          title: 'Tu punto de equilibrio diario',
+          text: 'Necesitas vender al menos ' + platosDia + ' platos de $' + plato.toFixed(2) + ' cada día que abres para cubrir tus gastos fijos. Todo lo que vendas por encima de esa cantidad es tu ganancia real.'
+        });
+      }
+
+      // Render recommendations
+      var html = '';
+      tips.forEach(function(tip) {
+        html += '<div class="p-4 rounded-2xl border ' + tip.color + '">';
+        html += '<div>';
+        html += '<h5 class="text-sm font-bold text-brand-navy mb-1">' + tip.title + '</h5>';
+        html += '<p class="text-xs sm:text-sm text-brand-navy/70 leading-relaxed">' + tip.text + '</p>';
+        html += '</div>';
+        html += '</div>';
+      });
+      recommendationsList.innerHTML = html;
+
+      // ── SHOW RESULTS ──
+      resultsSection.style.display = 'block';
+      setTimeout(function() {
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    });
+
+    // ── RECALCULATE BUTTON ──
+    if (btnRecalcular) {
+      btnRecalcular.addEventListener('click', function() {
+        document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+  });
+})();
+</script>
