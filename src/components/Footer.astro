@@ -1,0 +1,77 @@
+---
+const currentYear = new Date().getFullYear();
+const whatsappLink = "https://wa.me/593998896340?text=¡Hola!%20Vengo%20de%20la%20página%20web%20y%20estoy%20interesado%20en%20adquirir%20la%20licencia%20de%20RestoFinance.%20¿Me%20podrías%20ayudar%20con%20los%20pasos%20para%20la%20compra?%20¡Gracias!";
+---
+<footer class="bg-brand-navy text-white pt-16 pb-12 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      
+      <!-- Brand & Description -->
+      <div class="md:col-span-5 space-y-4">
+        <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-teal rounded-lg p-1 w-max">
+          <svg width="34" height="34" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <circle cx="100" cy="100" r="100" fill="#E85D1B"/>
+            <text x="100" y="132" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-size="120" font-weight="800" fill="white" text-anchor="middle">$</text>
+            <rect x="45" y="152" width="110" height="18" rx="9" fill="#0F7A75"/>
+          </svg>
+          <span class="text-xl font-display font-extrabold tracking-tight text-white">
+            Resto<span class="text-brand-orange">Finance</span>
+          </span>
+        </a>
+        <p class="text-xs sm:text-sm text-white/60 leading-relaxed max-w-sm">
+          El Punto de Venta (POS) definitivo para restaurantes. Diseñado para operar de forma 100% offline, ágil, segura y sin interrupciones por caídas de internet.
+        </p>
+      </div>
+
+      <!-- Quick Links (Manual, FAQs) -->
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider">Recursos y Soporte</h4>
+        <ul class="space-y-2.5 text-sm text-white/70">
+          <li>
+            <a href="/manual-de-usuario" class="hover:text-brand-orange transition-colors duration-200 flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              Manual de Usuario
+            </a>
+          </li>
+          <li>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="hover:text-brand-orange transition-colors duration-200 flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              Soporte por WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="md:col-span-4 space-y-4">
+        <h4 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider">Legal</h4>
+        <ul class="space-y-2.5 text-sm text-white/70">
+          <li>
+            <a href="/terminos-y-condiciones" class="hover:text-brand-orange transition-colors duration-200">
+              Términos y Condiciones
+            </a>
+          </li>
+          <li>
+            <a href="/politica-de-privacidad" class="hover:text-brand-orange transition-colors duration-200">
+              Política de Privacidad
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright Area -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+      <p class="text-center sm:text-left">
+        &copy; {currentYear} RestoFinance. Todos los derechos reservados.
+      </p>
+      <p class="text-center sm:text-right flex items-center gap-1.5">
+        <span>Garantía de funcionamiento local certificado</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+        <span>Windows POS</span>
+      </p>
+    </div>
+
+  </div>
+</footer>

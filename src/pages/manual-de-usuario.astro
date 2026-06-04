@@ -1,0 +1,328 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Manual de Usuario - RestoFinance"
+  description="Manual de usuario simplificado y paso a paso para RestoFinance. Aprende a usar el sistema de ventas, control de caja y gastos sin complicaciones."
+>
+  <Header />
+
+  <main class="flex-grow bg-brand-cream-light py-12 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <span class="text-xs font-bold text-brand-teal bg-brand-teal-light px-4 py-1.5 rounded-full uppercase tracking-wider">
+          Centro de Ayuda
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-brand-navy tracking-tight mt-3 mb-4">
+          Manual de Usuario RestoFinance
+        </h1>
+        <p class="text-base sm:text-lg text-brand-navy/70 leading-relaxed">
+          Guía fácil y paso a paso diseñada especialmente para personas que no son expertas en tecnología. ¡Aprende a controlar tu negocio en minutos!
+        </p>
+      </div>
+
+      <!-- Main Layout: Navigation index left, content right -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Side: Interactive Navigation Bar (Sticky on Desktop) -->
+        <aside class="lg:col-span-4 bg-white p-6 rounded-3xl border border-brand-orange/10 shadow-sm sticky top-24 z-20">
+          <h2 class="text-xs font-extrabold uppercase text-brand-orange tracking-wider mb-4">Índice del Manual</h2>
+          <nav class="space-y-1" aria-label="Manual Sections">
+            <a href="#primeros-pasos" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              1. Activación de tu Sistema
+            </a>
+            <a href="#modulo-ventas" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              2. Cómo Vender en Caja (Día a Día)
+            </a>
+            <a href="#modulo-menu" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              3. Gestionar tu Menú digital
+            </a>
+            <a href="#modulo-gastos" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              4. Registrar tus Gastos y Compras
+            </a>
+            <a href="#modulo-ganancias" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              5. Ver tus Ganancias Reales
+            </a>
+            <a href="#modulo-fiados" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              6. Control de Clientes Fiados
+            </a>
+            <a href="#modulo-tickets" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              7. Personalizar tus Tickets impresos
+            </a>
+            <a href="#modulo-seguridad" class="flex items-center gap-2.5 px-3 py-2.5 text-sm font-semibold rounded-xl text-brand-navy hover:bg-brand-orange-light hover:text-brand-orange transition-all duration-200">
+              <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+              8. Proteger tu dinero (Roles y PIN)
+            </a>
+          </nav>
+
+          <!-- Quick WhatsApp Support Banner -->
+          <div class="mt-8 p-4 bg-brand-teal-light rounded-2xl border border-brand-teal/15 text-center">
+            <h4 class="text-xs font-bold text-brand-teal uppercase tracking-wider mb-1.5">¿Aún necesitas ayuda?</h4>
+            <p class="text-[11px] text-brand-navy/70 leading-relaxed mb-3">Escríbenos directamente y te ayudamos paso a paso.</p>
+            <a 
+              href="https://wa.me/593998896340?text=¡Hola!%20Tengo%20una%20duda%20sobre%20el%20funcionamiento%20del%20sistema%20RestoFinance."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-brand-teal hover:bg-brand-teal-hover text-white text-xs font-bold rounded-xl transition-all shadow-md"
+            >
+              Soporte WhatsApp
+            </a>
+          </div>
+        </aside>
+
+        <!-- Right Side: Content Sections -->
+        <div class="lg:col-span-8 space-y-12">
+          
+          <!-- Section 1: Activación -->
+          <section id="primeros-pasos" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">1</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Primeros Pasos: Activación de tu Licencia</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              La primera vez que abras RestoFinance en tu computadora o celular Android, verás una ventana de seguridad. Esto sirve para vincular tu sistema con tu restaurante.
+            </p>
+            <div class="bg-brand-cream p-5 rounded-2xl border border-brand-orange/15 space-y-3">
+              <h3 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider">¿Qué datos debes llenar?</h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-brand-navy/80">
+                <li class="flex items-start gap-2">
+                  <span class="text-brand-orange mt-0.5">📌</span>
+                  <span><strong>Nombre del Restaurante:</strong> Coloca el nombre de tu local comercial.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-brand-orange mt-0.5">📌</span>
+                  <span><strong>Clave de Licencia:</strong> Ingresa el código alfanumérico de 16 dígitos que te enviamos por WhatsApp al comprar tu plan.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-brand-orange mt-0.5">📌</span>
+                  <span><strong>Nombre para Tickets:</strong> El nombre de facturación de tu ticket (Razón social o comercial). Este texto saldrá impreso en las cabeceras.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-emerald-500/10 p-4 rounded-2xl border border-emerald-500/20 text-xs sm:text-sm text-emerald-800 flex items-start gap-3">
+              <span class="text-lg">💡</span>
+              <div>
+                <strong>Consejo Importante:</strong> Inmediatamente después de activar tu licencia, el sistema te pedirá crear un <strong>PIN de 4 números</strong>. Este PIN es tu contraseña de Administrador. Memorízalo muy bien, ya que con él podrás revisar las ganancias de tu negocio.
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 2: Ventas -->
+          <section id="modulo-ventas" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">2</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Cómo Vender en Caja (Toma de Pedidos)</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              La pantalla principal es donde pasas la mayor parte del tiempo cobrando a tus clientes de manera rápida.
+            </p>
+            <div class="space-y-4">
+              <h3 class="text-sm font-bold text-brand-navy">Paso a Paso para Cobrar:</h3>
+              <ol class="list-decimal pl-5 space-y-3 text-xs sm:text-sm text-brand-navy/70">
+                <li><strong>Selecciona los platos:</strong> Toca o haz clic sobre los platillos en la cuadrícula izquierda. Verás que se agregan a la lista de compras de la derecha.</li>
+                <li><strong>Verifica el total:</strong> El sistema calculará automáticamente el subtotal y el total en tiempo real sin que tengas que usar calculadora.</li>
+                <li><strong>Presiona Cobrar:</strong> Presiona el gran botón de "Cobrar" y elige la forma de pago preferida del cliente:
+                  <ul class="list-disc pl-5 mt-1.5 space-y-1">
+                    <li><strong>Efectivo:</strong> Para cobros con dinero físico.</li>
+                    <li><strong>Transferencia:</strong> Para pagos con depósitos bancarios, apps móviles de banco, etc.</li>
+                    <li><strong>Fiado:</strong> Si el cliente es de confianza y pagará después. Se sumará al libro de cuentas pendientes del cliente.</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <!-- Section 3: Gestionar Menú -->
+          <section id="modulo-menu" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">3</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Gestionar tu Menú Digital</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Puedes agregar o cambiar los precios de tu menú en cualquier momento de manera muy fácil.
+            </p>
+            <div class="bg-brand-teal-light/50 p-5 rounded-2xl border border-brand-teal/15 space-y-3">
+              <h3 class="text-xs font-extrabold text-brand-teal uppercase tracking-wider">Para agregar un plato nuevo:</h3>
+              <ol class="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-brand-navy/80">
+                <li>Ve al panel de <strong>Gestión de Menú</strong>.</li>
+                <li>Sube una foto del plato (desde tu celular o computador).</li>
+                <li>Escribe el nombre del plato y su precio en dólares.</li>
+                <li>Selecciona a qué categoría pertenece (por ejemplo: Bebidas, Platos fuertes) y presiona Guardar.</li>
+              </ol>
+            </div>
+            <p class="text-xs sm:text-sm text-brand-navy/60">
+              * Puedes usar el botón <strong>"Nueva Categoría"</strong> para agrupar tus platos (ej. Desayunos, Almuerzos) y ponerles un color de fondo diferente para encontrarlos más rápido en la pantalla principal.
+            </p>
+          </section>
+
+          <!-- Section 4: Gastos y Compras -->
+          <section id="modulo-gastos" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">4</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Registrar tus Gastos y Compras (Insumos)</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Para saber tus ganancias reales, el sistema debe saber cuánto gastas en insumos (carne, papas, verduras) y en arriendo, luz o sueldos.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-brand-cream p-5 rounded-2xl border border-brand-orange/10 space-y-2">
+                <h3 class="text-sm font-bold text-brand-navy">1. Registro de Compras</h3>
+                <p class="text-xs text-brand-navy/70 leading-relaxed">
+                  Cuando vayas al mercado o al proveedor, registra los insumos comprados. El sistema multiplica la cantidad por el precio unitario y lo suma a tus gastos mensuales.
+                </p>
+                <div class="text-[10px] text-brand-orange font-bold">💡 Cuenta con historial para ver si el proveedor te subió los precios de un mes a otro.</div>
+              </div>
+              <div class="bg-brand-cream p-5 rounded-2xl border border-brand-orange/10 space-y-2">
+                <h3 class="text-sm font-bold text-brand-navy">2. Gastos Fijos Recurrentes</h3>
+                <p class="text-xs text-brand-navy/70 leading-relaxed">
+                  Registra el alquiler del local, luz, agua y sueldo de tus colaboradores una sola vez. RestoFinance los descontará automáticamente de tu balance cada mes para que no lo hagas de forma manual.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5: Ganancias Reales -->
+          <section id="modulo-ganancias" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">5</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Estado de Resultados: Ver tus Ganancias Reales</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Este es el panel principal para los dueños de negocio. Te dice exactamente cuánto dinero te quedó en el bolsillo.
+            </p>
+            <div class="bg-white p-6 rounded-2xl border border-brand-teal/20 bg-gradient-to-br from-brand-teal-light via-white to-brand-teal-light/50 space-y-4">
+              <h3 class="text-sm font-bold text-brand-teal">¿Cómo se calcula tu Ganancia Neta?</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div class="bg-white p-3 rounded-xl shadow-xs border border-brand-teal/5">
+                  <span class="block text-[10px] uppercase font-bold text-brand-navy/60">Ventas</span>
+                  <span class="block text-sm font-bold text-brand-navy">Ventas Totales</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-xs border border-brand-teal/5">
+                  <span class="block text-[10px] uppercase font-bold text-brand-orange">Menos</span>
+                  <span class="block text-sm font-bold text-brand-orange">Compras Insumos</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-xs border border-brand-teal/5">
+                  <span class="block text-[10px] uppercase font-bold text-brand-orange">Menos</span>
+                  <span class="block text-sm font-bold text-brand-orange">Gastos Fijos</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-xs border border-brand-teal/5">
+                  <span class="block text-[10px] uppercase font-bold text-emerald-600">Igual a</span>
+                  <span class="block text-sm font-bold text-emerald-600">Utilidad Real</span>
+                </div>
+              </div>
+              <p class="text-xs text-brand-navy/70 leading-relaxed pt-2">
+                Todo esto se hace automáticamente al ingresar el mes y año específico. Además, el sistema te muestra si ganaste más o menos dinero que el mes pasado con una gráfica comparativa clara.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 6: Fiados -->
+          <section id="modulo-fiados" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">6</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Control de Clientes Fiados (Cuentas por Cobrar)</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Si tus clientes de confianza te piden comida fiada, no los registres en cuadernos de papel donde se pueden borrar.
+            </p>
+            <div class="space-y-4">
+              <h3 class="text-sm font-bold text-brand-navy">Cómo funciona la Cartera de Fiados:</h3>
+              <ul class="space-y-3 text-xs sm:text-sm text-brand-navy/70">
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500">✓</span>
+                  <span><strong>Filtros rápidos:</strong> Verás a tus clientes agrupados en "Todos", "Con Deuda" (quienes te deben dinero) y "Al Día" (quienes pagaron todo).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500">✓</span>
+                  <span><strong>Recibir abonos:</strong> Si un cliente no puede pagarte todo, usa la opción <strong>"Abonar"</strong> para registrar una parte del pago. El sistema recalculará la deuda y el dinero entrará en tu reporte de caja del día de forma automática.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-emerald-500">✓</span>
+                  <span><strong>Cobrar todo:</strong> Cuando liquiden la totalidad, un solo clic dejará su cuenta al día.</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 7: Tickets -->
+          <section id="modulo-tickets" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">7</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Personalizar tus Tickets impresos</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Dale una imagen profesional a tu negocio configurando el papel térmico que entregas a tus clientes.
+            </p>
+            <div class="bg-brand-cream p-5 rounded-2xl border border-brand-orange/10 space-y-3 text-xs sm:text-sm text-brand-navy/80">
+              <p>Puedes cambiar los siguientes campos desde la sección de Configuración de Tickets:</p>
+              <ul class="list-disc pl-5 space-y-1 text-brand-navy/70">
+                <li>Dirección del local y Teléfono.</li>
+                <li>Mensaje de agradecimiento en el pie del ticket (ej. <i>"¡Gracias por su visita, vuelva pronto!"</i>).</li>
+                <li>Elegir el ancho de tu impresora térmica (impresoras de 80 mm estándar o de 58 mm pequeñas).</li>
+              </ul>
+              <p class="text-[11px] text-brand-navy/60">
+                * Nota: El nombre del restaurante en la parte de arriba del ticket no se puede modificar porque está enlazado a tu licencia para evitar fraudes de personal.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 8: Seguridad -->
+          <section id="modulo-seguridad" class="bg-white rounded-3xl p-8 border border-brand-orange/10 shadow-sm scroll-mt-24 space-y-6">
+            <div class="flex items-center gap-3 border-b border-brand-orange/5 pb-4">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange text-white text-xs font-extrabold">8</span>
+              <h2 class="text-xl font-bold font-display text-brand-navy">Proteger tu dinero (Cajeros vs. Administrador)</h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-navy/75 leading-relaxed">
+              Evita robos y descuadres de personal. RestoFinance cuenta con un sistema estricto de seguridad para cuando delegas el cobro a tus empleados (Cajeros).
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-emerald-500/5 p-5 rounded-2xl border border-emerald-500/15 space-y-2">
+                <h3 class="text-sm font-bold text-emerald-800">Lo que el Cajero PUEDE hacer:</h3>
+                <ul class="list-disc pl-5 text-xs text-emerald-800/80 space-y-1">
+                  <li>Registrar pedidos y cobrar ventas ordinarias.</li>
+                  <li>Buscar productos del menú.</li>
+                  <li>Realizar cobros y abonos autorizados.</li>
+                  <li>Registrar compras diarias de insumos (si lo permites).</li>
+                </ul>
+              </div>
+              <div class="bg-red-500/5 p-5 rounded-2xl border border-red-500/15 space-y-2">
+                <h3 class="text-sm font-bold text-red-800">Lo que el Cajero NO PUEDE hacer (Bloqueado):</h3>
+                <ul class="list-disc pl-5 text-xs text-red-800/80 space-y-1">
+                  <li>Anular ventas realizadas.</li>
+                  <li>Ver o modificar los gastos fijos.</li>
+                  <li>Ingresar al <strong>Estado de Resultados</strong> (no sabrá cuánto ganas).</li>
+                  <li>Cambiar la configuración del ticket.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-brand-orange/10 p-5 rounded-2xl border border-brand-orange/20 text-xs sm:text-sm text-brand-navy/80 space-y-2">
+              <h4 class="font-bold text-brand-orange">¿Cómo volver al perfil de Administrador?</h4>
+              <p class="leading-relaxed">
+                Si tu empleado está operando la caja y tú necesitas entrar a ver las finanzas del mes, haz clic en el botón de cambiar perfil e introduce tu **PIN secreto de 4 números**. El sistema validará tu contraseña para darte acceso de control total.
+              </p>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

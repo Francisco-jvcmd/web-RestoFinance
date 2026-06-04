@@ -1,0 +1,132 @@
+---
+---
+<header class="sticky top-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-orange/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Logo and Name -->
+      <a href="/" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-offset-2 rounded-lg p-1">
+        <svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <circle cx="100" cy="100" r="100" fill="#E85D1B"/>
+          <text x="100" y="132" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-size="120" font-weight="800" fill="white" text-anchor="middle">$</text>
+          <rect x="45" y="152" width="110" height="18" rx="9" fill="#0F7A75"/>
+        </svg>
+        <span class="text-2xl font-display font-extrabold tracking-tight text-brand-navy">
+          Resto<span class="text-brand-orange">Finance</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/#beneficios" class="text-sm font-semibold text-brand-navy/80 hover:text-brand-orange transition-colors duration-200">
+          Beneficios
+        </a>
+        <a href="/#instalacion" class="text-sm font-semibold text-brand-navy/80 hover:text-brand-orange transition-colors duration-200">
+          Instalación
+        </a>
+        <a href="/#precios" class="text-sm font-semibold text-brand-navy/80 hover:text-brand-orange transition-colors duration-200">
+          Precios
+        </a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center">
+        <a 
+          href="/#instalacion" 
+          class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-brand-orange hover:bg-brand-orange-hover hover:scale-[1.02] shadow-lg shadow-brand-orange/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2"
+        >
+          Descargar Gratis
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden">
+        <button 
+          id="mobile-menu-btn"
+          type="button" 
+          class="inline-flex items-center justify-center p-2 rounded-xl text-brand-navy/80 hover:text-brand-orange hover:bg-brand-orange-light focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all duration-200"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menú principal</span>
+          <svg class="block h-6 width-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="menu-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="hidden h-6 width-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu, show/hide based on menu state. -->
+  <div class="hidden md:hidden transition-all duration-300 ease-in-out border-b border-brand-orange/10 bg-brand-cream-light" id="mobile-menu">
+    <div class="px-4 pt-2 pb-4 space-y-2">
+      <a 
+        href="/#beneficios" 
+        class="block px-4 py-3 rounded-xl text-base font-semibold text-brand-navy/80 hover:text-brand-orange hover:bg-brand-orange-light transition-all duration-200"
+      >
+        Beneficios
+      </a>
+      <a 
+        href="/#instalacion" 
+        class="block px-4 py-3 rounded-xl text-base font-semibold text-brand-navy/80 hover:text-brand-orange hover:bg-brand-orange-light transition-all duration-200"
+      >
+        Instalación
+      </a>
+      <a 
+        href="/#precios" 
+        class="block px-4 py-3 rounded-xl text-base font-semibold text-brand-navy/80 hover:text-brand-orange hover:bg-brand-orange-light transition-all duration-200"
+      >
+        Precios
+      </a>
+      <div class="pt-2 px-4">
+        <a 
+          href="/#instalacion" 
+          class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl text-base font-bold text-white bg-brand-orange hover:bg-brand-orange-hover shadow-lg shadow-brand-orange/20 transition-all duration-200"
+        >
+          Descargar Gratis
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (mobileMenuBtn && mobileMenu && menuIcon && closeIcon) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle expanded state
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      
+      // Toggle menu visibility
+      mobileMenu.classList.toggle('hidden');
+      
+      // Toggle icons
+      menuIcon.classList.toggle('hidden');
+      menuIcon.classList.toggle('block');
+      closeIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('block');
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('block');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        closeIcon.classList.remove('block');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>

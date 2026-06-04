@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import FloatingWA from '../components/FloatingWA.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "RestoFinance - El punto de venta offline para tu restaurante", 
+	description = "El sistema de ventas POS para restaurantes que nunca se cae por falta de internet. Funciona 100% offline en Windows, de forma local, rápida y segura." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="RestoFinance" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/logo-preview.png" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+	</head>
+	<body class="bg-brand-cream text-brand-navy min-h-screen flex flex-col font-sans antialiased overflow-x-hidden relative">
+		<!-- Innovative Ambient Background -->
+		<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none">
+			<!-- Blurry glow orbs -->
+			<div class="absolute -top-[10%] -left-[10%] w-[50%] aspect-square rounded-full bg-brand-teal/6 blur-[120px] mix-blend-multiply opacity-75"></div>
+			<div class="absolute top-[35%] -right-[10%] w-[45%] aspect-square rounded-full bg-brand-orange/5 blur-[130px] mix-blend-multiply opacity-70"></div>
+			<div class="absolute -bottom-[10%] left-[20%] w-[50%] aspect-square rounded-full bg-brand-teal/5 blur-[120px] mix-blend-multiply opacity-75"></div>
+			
+			<!-- Digital Dotted Tech Grid Overlay -->
+			<div class="absolute inset-0 opacity-[0.25] bg-[radial-gradient(#0F7A75_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+		</div>
+
+		<!-- Site Content Wrapper (forces z-index stacking above background) -->
+		<div class="relative z-10 flex flex-col min-h-screen">
+			<slot />
+		</div>
+		<FloatingWA />
+	</body>
+</html>

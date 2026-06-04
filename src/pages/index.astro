@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Installation from '../components/Installation.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+	title="RestoFinance - Punto de Venta POS para Restaurantes 100% Offline"
+	description="El sistema POS local para restaurantes que nunca se cae. Vende, imprime tickets y controla inventario en Windows sin depender de conexión a internet."
+>
+	<Header />
+	
+	<main>
+		<!-- Hero & Simulator -->
+		<Hero />
+
+		<!-- Benefits Grid Section -->
+		<section id="beneficios" class="py-24 bg-brand-cream/30 border-t border-brand-orange/5 scroll-mt-20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				
+				<!-- Header -->
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<span class="text-xs font-bold text-brand-teal bg-brand-teal-light px-3 py-1 rounded-full uppercase tracking-wider">
+						¿Por qué elegir RestoFinance?
+					</span>
+					<h2 class="text-3xl sm:text-4xl font-display font-extrabold text-brand-navy tracking-tight mt-3 mb-4">
+						Diseñado para la realidad de tu restaurante
+					</h2>
+					<p class="text-sm sm:text-base text-brand-navy/70 leading-relaxed">
+						Olvídate de las caídas de sistema en horas pico. RestoFinance te brinda la estabilidad de un software de escritorio y la agilidad de los sistemas más modernos.
+					</p>
+				</div>
+
+				<!-- Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					
+					<!-- Benefit 1 -->
+					<div class="bg-white rounded-3xl p-8 border border-brand-orange/5 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300">
+						<div class="w-12 h-12 rounded-2xl bg-brand-orange-light text-brand-orange flex items-center justify-center mb-6">
+							<!-- WiFi Off Icon -->
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M10.586 10.586a2 2 0 102.828 2.828M15.485 15.485a7 7 0 00-9.9 0M17.657 17.657a10 10 0 00-14.143 0M13.364 8.414a5 5 0 00-5.728.728m7.728 2.215a5 5 0 00-.728-2.943" />
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-navy mb-2 font-display">Operación 100% Offline</h3>
+						<p class="text-sm text-brand-navy/70 leading-relaxed">
+							Registra ventas sin depender de internet. Si la red de tu local falla, tu negocio sigue funcionando a la perfección.
+						</p>
+					</div>
+
+					<!-- Benefit 2 -->
+					<div class="bg-white rounded-3xl p-8 border border-brand-orange/5 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300">
+						<div class="w-12 h-12 rounded-2xl bg-brand-teal-light text-brand-teal flex items-center justify-center mb-6">
+							<!-- Bolt Icon -->
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-navy mb-2 font-display">Máxima Velocidad Local</h3>
+						<p class="text-sm text-brand-navy/70 leading-relaxed">
+							Al ejecutarse de manera nativa en tu computadora Windows, las pantallas cargan en milisegundos. Sin tiempos de carga ni retardos.
+						</p>
+					</div>
+
+					<!-- Benefit 3 -->
+					<div class="bg-white rounded-3xl p-8 border border-brand-orange/5 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300">
+						<div class="w-12 h-12 rounded-2xl bg-[#FFF1EB] text-[#E85D1B] flex items-center justify-center mb-6">
+							<!-- Shield Database Icon -->
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+							</svg>
+						</div>
+						<h3 class="text-lg font-bold text-brand-navy mb-2 font-display">Tus Datos bajo tu Control</h3>
+						<p class="text-sm text-brand-navy/70 leading-relaxed">
+							Tu base de datos está guardada localmente en tu disco duro de forma segura. No compartes tu facturación ni tus recetas en servidores de terceros en la nube.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Step-by-Step Installation Guide -->
+		<Installation />
+
+		<!-- Pricing Section -->
+		<Pricing />
+	</main>
+
+	<Footer />
+</Layout>

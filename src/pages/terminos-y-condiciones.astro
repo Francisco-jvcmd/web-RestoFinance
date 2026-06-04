@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Términos y Condiciones - RestoFinance"
+  description="Términos y condiciones legales de uso de RestoFinance. Licencia de software POS local y limitación de responsabilidades."
+>
+  <Header />
+
+  <main class="flex-grow bg-brand-cream-light py-16 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb / Small header -->
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold text-brand-orange bg-brand-orange-light px-3 py-1 rounded-full uppercase tracking-wider">
+          Legal
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-display font-extrabold text-brand-navy tracking-tight mt-3 mb-4">
+          Términos y Condiciones de Uso
+        </h1>
+        <p class="text-xs sm:text-sm text-brand-navy/60">
+          Última actualización: 3 de junio de 2026
+        </p>
+      </div>
+
+      <!-- Legal Text Container -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-brand-orange/10 shadow-sm space-y-8 text-sm sm:text-base text-brand-navy/80 leading-relaxed font-sans">
+        
+        <p>
+          Bienvenido a <strong>RestoFinance</strong>. Por favor, lea detenidamente los presentes Términos y Condiciones antes de adquirir una licencia o descargar y utilizar nuestro software. Al descargar, instalar o usar la aplicación RestoFinance, usted acepta quedar vinculado por estos términos. Si no está de acuerdo con alguno de ellos, le rogamos no instalar ni utilizar el software.
+        </p>
+
+        <div class="h-px bg-brand-orange/10 w-full"></div>
+
+        <!-- Section 1 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">1.</span> Naturaleza del Software (Funcionamiento Local)
+          </h2>
+          <p>
+            RestoFinance es un software de Punto de Venta (POS) diseñado para ser ejecutado localmente y de manera 100% offline en computadoras con sistema operativo Windows compatible. 
+          </p>
+          <p>
+            Dado que el software funciona localmente, <strong>toda la base de datos (ventas, recetas, inventarios, clientes, caja) se almacena únicamente en el disco duro del equipo del usuario</strong>. RestoFinance no tiene acceso a sus datos comerciales, ni almacena copias de seguridad de su información en servidores en la nube.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">2.</span> Licenciamiento y Uso Autorizado
+          </h2>
+          <p>
+            Sujeto al pago de la tarifa correspondiente (mensual o anual), RestoFinance otorga al usuario una licencia de uso limitada, no exclusiva, intransferible y revocable para instalar y utilizar el software en el número de equipos autorizados.
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-brand-navy/70">
+            <li><strong>Prohibiciones:</strong> Queda estrictamente prohibido descompilar, realizar ingeniería inversa, modificar, duplicar, alquilar, revender o redistribuir el software RestoFinance sin autorización expresa por escrito.</li>
+            <li><strong>Verificación de Licencia:</strong> El software requiere una validación de clave de activación que se realiza al momento de la instalación inicial o periódicamente según el plan adquirido.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">3.</span> Responsabilidad del Usuario sobre los Datos
+          </h2>
+          <p>
+            Al ser un software local, usted es el único responsable de:
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-brand-navy/70">
+            <li>Realizar copias de seguridad (backups) periódicas de la base de datos de RestoFinance (archivo de base de datos local) en dispositivos externos o almacenamiento en la nube personal.</li>
+            <li>La seguridad física e informática de las computadoras donde se ejecuta el programa, incluyendo la protección contra malware, virus o accesos no autorizados de su personal.</li>
+            <li>El correcto registro de impuestos y facturación de acuerdo con las leyes locales de su país o región.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">4.</span> Exclusión de Garantías y Limitación de Responsabilidad
+          </h2>
+          <p>
+            EL SOFTWARE SE PROPORCIONA "TAL CUAL" Y "SEGÚN DISPONIBILIDAD", SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS.
+          </p>
+          <p>
+            En la medida máxima permitida por la ley aplicable, RestoFinance y sus desarrolladores no serán responsables bajo ninguna circunstancia por:
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-brand-navy/70">
+            <li>Pérdida de datos comerciales, registros de ventas, recetas o información financiera.</li>
+            <li>Pérdidas de beneficios, interrupción del negocio o fallas en el servicio del restaurante debidas a fallos del hardware local, cortes de luz, daños de disco duro o mal uso del software.</li>
+            <li>Incompatibilidades con impresoras térmicas, cajones de dinero u otros periféricos del usuario.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">5.</span> Planes, Pagos y Cancelaciones
+          </h2>
+          <p>
+            Las licencias mensuales o anuales se pagan por adelantado a través de los canales autorizados. 
+          </p>
+          <ul class="list-disc pl-5 space-y-1.5 text-brand-navy/70">
+            <li><strong>Soporte:</strong> El plan anual incluye soporte prioritario para instalación y configuración inicial. El plan mensual incluye soporte estándar.</li>
+            <li><strong>Reembolsos:</strong> Debido a que ofrecemos una versión de prueba gratuita descargable para que los usuarios validen si el software cumple con sus necesidades antes de pagar, los pagos de licencias activadas no son reembolsables.</li>
+            <li><strong>Cancelación:</strong> Usted puede decidir no renovar su licencia en cualquier momento. Al expirar la licencia, el software pasará a modo de lectura o se suspenderá la facturación hasta su renovación.</li>
+          </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold font-display text-brand-navy flex items-center gap-2">
+            <span class="text-brand-orange">6.</span> Modificaciones de los Términos
+          </h2>
+          <p>
+            Nos reservamos el derecho de modificar estos términos en cualquier momento. Cualquier cambio será publicado en esta página web con la fecha de actualización correspondiente. El uso continuo del software después de dichos cambios constituye la aceptación de los nuevos términos.
+          </p>
+        </section>
+
+        <!-- Legal Notice Footer -->
+        <div class="bg-brand-cream p-6 rounded-2xl border border-brand-orange/5 text-xs text-brand-navy/60 leading-relaxed">
+          <p class="font-bold mb-1 text-brand-navy">Contacto Legal</p>
+          Si tiene cualquier duda o consulta en relación con estos Términos y Condiciones, puede ponerse en contacto con nuestro equipo de soporte directamente a través de los enlaces de WhatsApp disponibles en nuestro sitio web oficial.
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
