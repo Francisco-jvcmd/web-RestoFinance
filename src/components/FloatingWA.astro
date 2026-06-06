@@ -47,14 +47,26 @@ const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messag
 
       // Hide tooltip when scrolling down, show on desktop hover
       let lastScrollTop = 0;
+      let ticking = false;
+
       window.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop && st > 100) {
-          // scroll down -> hide
-          tooltip.classList.add('opacity-0', '-translate-x-4');
-          tooltip.classList.remove('opacity-100', 'translate-x-0');
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop && st > 100) {
+              // scroll down -> hide
+              tooltip.classList.add('opacity-0', '-translate-x-4');
+              tooltip.classList.remove('opacity-100', 'translate-x-0');
+            } else if (st <= 100) {
+              // scroll up/top -> show
+              tooltip.classList.remove('opacity-0', '-translate-x-4');
+              tooltip.classList.add('opacity-100', 'translate-x-0');
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+            ticking = false;
+          });
+          ticking = true;
         }
-        lastScrollTop = st <= 0 ? 0 : st;
       }, { passive: true });
     }
   });
