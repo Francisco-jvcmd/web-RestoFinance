@@ -30,7 +30,7 @@
         <div>
           <h3 class="text-lg font-bold text-brand-navy mb-1 group-hover:text-brand-orange transition-colors">Descarga el instalador</h3>
           <p class="text-sm text-brand-navy/70 leading-relaxed mb-2.5">
-            Haz clic en el botón de descarga para obtener <code class="bg-brand-cream px-1.5 py-0.5 rounded border border-brand-orange/15 text-xs text-brand-orange font-semibold font-mono">RestoFinance_1.0.0_x64-setup.exe</code> (78MB). Es 100% libre de virus. (Recordemos que no está firmado digitalmente).
+            Haz clic en el botón de descarga para obtener <code class="bg-brand-cream px-1.5 py-0.5 rounded border border-brand-orange/15 text-xs text-brand-orange font-semibold font-mono">RestoFinance_1.0.0_x64-setup.exe</code> (78MB). Es 100% libre de virus.
           </p>
           <a 
             href="https://github.com/Francisco-jvcmd/RestoFinance-Instalador/releases/download/v1.0.0/RestoFinance_1.0.0_x64-setup.exe" 
@@ -49,10 +49,48 @@
           2
         </div>
         <div>
-          <h3 class="text-lg font-bold text-brand-navy mb-1 group-hover:text-brand-teal transition-colors">Ejecuta el sistema</h3>
-          <p class="text-sm text-brand-navy/70 leading-relaxed">
-            Abre el instalador en tu sistema operativo Windows (10 u 11). Sigue el asistente guiado de instalación paso a paso. Se creará automáticamente un acceso directo en tu escritorio para iniciar la aplicación local en segundos.
+          <h3 class="text-lg font-bold text-brand-navy mb-1 group-hover:text-brand-teal transition-colors">Ejecuta el instalador</h3>
+          <p class="text-sm text-brand-navy/70 leading-relaxed mb-3">
+            Abre el instalador en tu sistema operativo Windows (10 u 11). Sigue el asistente guiado de instalación paso a paso. Se creará automáticamente un acceso directo en tu escritorio.
           </p>
+
+          <!-- SmartScreen Guide (collapsible) -->
+          <details class="bg-brand-cream/60 border border-brand-orange/10 rounded-2xl overflow-hidden" id="smartscreen-guide">
+            <summary class="cursor-pointer px-4 py-3 text-sm font-bold text-brand-navy hover:text-brand-orange transition-colors select-none flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-orange shrink-0 transition-transform duration-200 details-arrow" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              Windows muestra un aviso de seguridad al abrir el instalador
+            </summary>
+            <div class="px-4 pb-4 pt-1 space-y-3">
+              <p class="text-xs text-brand-navy/70 leading-relaxed">
+                Este aviso aparece porque el programa aún no cuenta con una firma digital certificada. Es completamente seguro. Para continuar:
+              </p>
+              <ol class="space-y-2 text-xs text-brand-navy/80">
+                <li class="flex gap-3 items-start">
+                  <span class="shrink-0 w-6 h-6 rounded-lg bg-brand-orange-light text-brand-orange flex items-center justify-center font-display font-bold text-[11px] border border-brand-orange/15">1</span>
+                  <span>En la ventana del aviso, haz clic en <strong class="text-brand-navy">"Más información"</strong> (texto azul subrayado).</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="shrink-0 w-6 h-6 rounded-lg bg-brand-orange-light text-brand-orange flex items-center justify-center font-display font-bold text-[11px] border border-brand-orange/15">2</span>
+                  <span>Aparecerá un botón nuevo. Haz clic en <strong class="text-brand-navy">"Ejecutar de todas formas"</strong>.</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="shrink-0 w-6 h-6 rounded-lg bg-brand-orange-light text-brand-orange flex items-center justify-center font-display font-bold text-[11px] border border-brand-orange/15">3</span>
+                  <span>El instalador se abrirá con normalidad. <strong class="text-brand-navy">Esto solo sucede la primera vez.</strong></span>
+                </li>
+              </ol>
+              <div class="flex items-start gap-2 bg-brand-teal-light border border-brand-teal/15 rounded-xl px-3 py-2.5">
+                <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <p class="text-[11px] text-brand-teal font-semibold leading-relaxed">RestoFinance es un software seguro. Estamos en proceso de obtener la firma digital para eliminar este aviso.</p>
+              </div>
+              <a 
+                href="/guia-instalacion" 
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-teal hover:text-brand-orange transition-colors"
+              >
+                Ver guía completa paso a paso
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </details>
         </div>
       </div>
 
@@ -73,6 +111,13 @@
 
   </div>
 </section>
+
+<!-- Rotate arrow on <details> open -->
+<style>
+  details[open] .details-arrow {
+    transform: rotate(90deg);
+  }
+</style>
 
 <!-- Script to handle download toast -->
 <script>

@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+	title="Guía de Instalación - RestoFinance"
+	description="Guía paso a paso para instalar RestoFinance en Windows 10 y Windows 11. Instrucciones para resolver el aviso de Windows SmartScreen."
+>
+	<Header />
+	
+	<main>
+		<section class="py-16 sm:py-24 scroll-mt-20">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+				<!-- Breadcrumb -->
+				<nav class="mb-8 text-xs font-semibold text-brand-navy/50" aria-label="Breadcrumb">
+					<a href="/" class="hover:text-brand-orange transition-colors">Inicio</a>
+					<span class="mx-2">/</span>
+					<span class="text-brand-navy/80">Guía de Instalación</span>
+				</nav>
+
+				<!-- Page Header -->
+				<div class="mb-12">
+					<span class="text-xs font-bold text-brand-orange bg-brand-orange-light px-3 py-1 rounded-full uppercase tracking-wider">
+						Soporte
+					</span>
+					<h1 class="text-3xl sm:text-4xl font-display font-extrabold text-brand-navy tracking-tight mt-3 mb-4">
+						Guía de Instalación de RestoFinance
+					</h1>
+					<p class="text-sm sm:text-base text-brand-navy/70 leading-relaxed max-w-2xl">
+						Sigue estos pasos para instalar RestoFinance en tu computador con Windows 10 u 11. Si Windows muestra un aviso de seguridad, aquí te explicamos cómo resolverlo.
+					</p>
+				</div>
+
+				<!-- Steps -->
+				<div class="flex flex-col gap-10">
+
+					<!-- Step 1: Descargar -->
+					<div class="flex gap-4 sm:gap-5 items-start">
+						<div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-orange-light text-brand-orange border border-brand-orange/20 flex items-center justify-center font-display font-extrabold text-base sm:text-lg shadow-sm">
+							1
+						</div>
+						<div class="flex-1 min-w-0">
+							<h2 class="text-lg sm:text-xl font-bold text-brand-navy mb-2 font-display">Descarga el instalador</h2>
+							<p class="text-sm text-brand-navy/70 leading-relaxed mb-3">
+								Haz clic en el botón de descarga de la <a href="/#instalacion" class="text-brand-teal font-semibold hover:text-brand-orange transition-colors underline underline-offset-2">página principal</a> para obtener el archivo <code class="bg-brand-cream px-1.5 py-0.5 rounded border border-brand-orange/15 text-xs text-brand-orange font-semibold font-mono">RestoFinance_1.0.0_x64-setup.exe</code>.
+							</p>
+							<div class="flex items-start gap-2 bg-brand-teal-light border border-brand-teal/15 rounded-xl px-3 py-2.5">
+								<svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+								<p class="text-[11px] sm:text-xs text-brand-teal font-semibold leading-relaxed">El archivo se descarga desde GitHub, una plataforma segura de código. Tu navegador puede preguntar si deseas conservar el archivo: haz clic en "Conservar".</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Divider -->
+					<div class="h-px bg-brand-orange/8 ml-14 sm:ml-17"></div>
+
+					<!-- Step 2: Ejecutar -->
+					<div class="flex gap-4 sm:gap-5 items-start">
+						<div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-teal-light text-brand-teal border border-brand-teal/20 flex items-center justify-center font-display font-extrabold text-base sm:text-lg shadow-sm">
+							2
+						</div>
+						<div class="flex-1 min-w-0">
+							<h2 class="text-lg sm:text-xl font-bold text-brand-navy mb-2 font-display">Abre el instalador</h2>
+							<p class="text-sm text-brand-navy/70 leading-relaxed">
+								Haz doble clic en el archivo descargado. Si todo marcha bien, se abrirá el asistente de instalación. Sigue los pasos del asistente y RestoFinance quedará instalado en segundos.
+							</p>
+						</div>
+					</div>
+
+					<!-- Divider -->
+					<div class="h-px bg-brand-orange/8 ml-14 sm:ml-17"></div>
+
+					<!-- SmartScreen Section -->
+					<div id="smartscreen" class="scroll-mt-24">
+						<div class="flex gap-4 sm:gap-5 items-start">
+							<div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-orange-light text-brand-orange border border-brand-orange/20 flex items-center justify-center shadow-sm">
+								<svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+							</div>
+							<div class="flex-1 min-w-0">
+								<h2 class="text-lg sm:text-xl font-bold text-brand-navy mb-2 font-display">Si Windows muestra un aviso de seguridad</h2>
+								<p class="text-sm text-brand-navy/70 leading-relaxed mb-4">
+									Es posible que Windows muestre el mensaje <strong class="text-brand-navy">"Windows protegió su PC"</strong>. Esto ocurre porque el instalador aún no tiene una firma digital certificada, no porque sea inseguro.
+								</p>
+							</div>
+						</div>
+
+						<!-- Visual Guide Card -->
+						<div class="ml-14 sm:ml-17 mt-2 bg-white rounded-2xl border border-brand-orange/10 shadow-sm overflow-hidden">
+							
+							<!-- Sub-step A -->
+							<div class="p-4 sm:p-5 border-b border-brand-orange/8">
+								<div class="flex gap-3 items-start">
+									<span class="shrink-0 w-7 h-7 rounded-lg bg-brand-orange text-white flex items-center justify-center font-display font-bold text-xs shadow-sm">A</span>
+									<div class="flex-1 min-w-0">
+										<h3 class="text-sm font-bold text-brand-navy mb-1.5">Haz clic en "Más información"</h3>
+										<p class="text-xs text-brand-navy/65 leading-relaxed">
+											En la ventana de aviso azul, busca el texto <strong class="text-brand-teal">"Más información"</strong>. Es un enlace de texto que aparece debajo del mensaje principal. Haz clic en él.
+										</p>
+										<!-- Visual representation of SmartScreen dialog -->
+										<div class="mt-3 bg-[#F0F4F8] rounded-xl p-4 border border-[#D1DAE5]">
+											<div class="flex items-start gap-3">
+												<div class="shrink-0 w-8 h-8 rounded-full bg-[#0078D4] flex items-center justify-center">
+													<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+												</div>
+												<div>
+													<p class="text-xs font-bold text-[#1B1B1B] mb-1">Windows protegió su PC</p>
+													<p class="text-[10px] sm:text-[11px] text-[#5A5A5A] leading-relaxed mb-2">Microsoft Defender SmartScreen impidió el inicio de una aplicación no reconocida...</p>
+													<span class="text-[11px] font-semibold text-[#0078D4] underline underline-offset-2 cursor-default">Más información</span>
+													<span class="text-[10px] text-brand-orange font-bold ml-2">&#8592; Haz clic aquí</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Sub-step B -->
+							<div class="p-4 sm:p-5 border-b border-brand-orange/8">
+								<div class="flex gap-3 items-start">
+									<span class="shrink-0 w-7 h-7 rounded-lg bg-brand-orange text-white flex items-center justify-center font-display font-bold text-xs shadow-sm">B</span>
+									<div class="flex-1 min-w-0">
+										<h3 class="text-sm font-bold text-brand-navy mb-1.5">Haz clic en "Ejecutar de todas formas"</h3>
+										<p class="text-xs text-brand-navy/65 leading-relaxed">
+											Después de hacer clic en "Más información", aparecerá un nuevo botón en la parte inferior. Haz clic en <strong class="text-brand-teal">"Ejecutar de todas formas"</strong>.
+										</p>
+										<!-- Visual representation of the second step -->
+										<div class="mt-3 bg-[#F0F4F8] rounded-xl p-4 border border-[#D1DAE5]">
+											<div class="flex items-start gap-3">
+												<div class="shrink-0 w-8 h-8 rounded-full bg-[#0078D4] flex items-center justify-center">
+													<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path></svg>
+												</div>
+												<div>
+													<p class="text-xs font-bold text-[#1B1B1B] mb-1">Windows protegió su PC</p>
+													<p class="text-[10px] sm:text-[11px] text-[#5A5A5A] leading-relaxed mb-1">Aplicación: RestoFinance_1.0.0_x64-setup.exe</p>
+													<p class="text-[10px] sm:text-[11px] text-[#5A5A5A] leading-relaxed mb-3">Publicador: Publicador desconocido</p>
+													<div class="flex flex-col sm:flex-row gap-2">
+														<span class="inline-flex items-center justify-center px-4 py-1.5 rounded-md text-[11px] font-bold text-white bg-[#0078D4] cursor-default">Ejecutar de todas formas</span>
+														<span class="inline-flex items-center justify-center px-4 py-1.5 rounded-md text-[11px] font-semibold text-[#5A5A5A] bg-[#E5E5E5] cursor-default">No ejecutar</span>
+													</div>
+													<span class="block text-[10px] text-brand-orange font-bold mt-2">&#8593; Haz clic en este botón</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Sub-step C -->
+							<div class="p-4 sm:p-5">
+								<div class="flex gap-3 items-start">
+									<span class="shrink-0 w-7 h-7 rounded-lg bg-brand-teal text-white flex items-center justify-center font-display font-bold text-xs shadow-sm">C</span>
+									<div class="flex-1 min-w-0">
+										<h3 class="text-sm font-bold text-brand-navy mb-1.5">El instalador se abrirá normalmente</h3>
+										<p class="text-xs text-brand-navy/65 leading-relaxed">
+											El asistente de instalación de RestoFinance se iniciará. Sigue los pasos del asistente para completar la instalación. Este aviso <strong class="text-brand-navy">solo aparece la primera vez</strong>.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Trust note -->
+						<div class="ml-14 sm:ml-17 mt-4 flex items-start gap-2 bg-brand-teal-light border border-brand-teal/15 rounded-xl px-4 py-3">
+							<svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+							<div>
+								<p class="text-xs font-bold text-brand-teal mb-0.5">RestoFinance es seguro</p>
+								<p class="text-[11px] text-brand-teal/80 leading-relaxed">Este aviso aparece porque el software aún no cuenta con una firma digital certificada. Estamos en proceso de obtenerla. El programa ha sido verificado y es 100% libre de malware.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Divider -->
+					<div class="h-px bg-brand-orange/8 ml-14 sm:ml-17"></div>
+
+					<!-- Step 3: Activar -->
+					<div class="flex gap-4 sm:gap-5 items-start">
+						<div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#FFF1EB] text-[#E85D1B] border border-brand-orange/20 flex items-center justify-center font-display font-extrabold text-base sm:text-lg shadow-sm">
+							3
+						</div>
+						<div class="flex-1 min-w-0">
+							<h2 class="text-lg sm:text-xl font-bold text-brand-navy mb-2 font-display">Ingresa tu clave de activación</h2>
+							<p class="text-sm text-brand-navy/70 leading-relaxed">
+								Inicia RestoFinance e introduce la clave de licencia que compraste. Puedes solicitar tu licencia mensual o anual a través de WhatsApp. Estarás listo para vender de forma local y 100% offline.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Bottom CTA -->
+				<div class="mt-16 text-center">
+					<p class="text-sm text-brand-navy/60 mb-4">¿Tienes dudas con la instalación?</p>
+					<a 
+						href="https://wa.me/593998896340?text=¡Hola!%20Necesito%20ayuda%20con%20la%20instalación%20de%20RestoFinance."
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl text-sm font-bold text-white bg-brand-teal hover:bg-brand-teal-hover shadow-lg shadow-brand-teal/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+					>
+						<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+						Escríbenos por WhatsApp
+					</a>
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
